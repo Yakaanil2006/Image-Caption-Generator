@@ -72,43 +72,12 @@ font-weight:600;
 margin-top:20px;
 }
 
-/* Project Section */
-.info-section{
-margin-top:60px;
-padding:35px;
-background:rgba(30,41,59,0.6);
-border-radius:16px;
-border:1px solid rgba(255,255,255,0.08);
-}
-
-.info-title{
-font-size:26px;
-font-weight:700;
-color:#22c55e;
-margin-bottom:10px;
-}
-
-.info-text{
-color:#cbd5f5;
-font-size:16px;
-line-height:1.7;
-}
-
-/* Tech tags */
-.tech-box{
-background:#0f172a;
-padding:10px 16px;
-border-radius:8px;
-display:inline-block;
-margin:6px;
-border:1px solid #334155;
-}
-
 /* Footer */
 .footer{
 text-align:center;
-margin-top:40px;
+margin-top:50px;
 color:#94a3b8;
+font-size:14px;
 }
 
 img{
@@ -164,65 +133,9 @@ with right:
     else:
         st.info("Upload an image to generate caption")
 
-# ---------------- Project Details Section ----------------
-st.markdown('<div class="info-section">', unsafe_allow_html=True)
-
-st.markdown('<div class="info-title">🚀 About the Project</div>', unsafe_allow_html=True)
-
-st.markdown("""
-<div class="info-text">
-This AI Image Caption Generator automatically produces a natural language
-description for uploaded images. The system analyzes visual features and
-generates meaningful captions using deep learning techniques.
-</div>
-""", unsafe_allow_html=True)
-
-st.markdown("<br>", unsafe_allow_html=True)
-
-st.markdown('<div class="info-title">🧠 Model Architecture</div>', unsafe_allow_html=True)
-
-st.markdown("""
-<div class="info-text">
-The model combines a CNN feature extractor with an LSTM text generator.
-The CNN analyzes the image and extracts visual features, while the LSTM
-generates captions word-by-word based on the extracted features.
-</div>
-""", unsafe_allow_html=True)
-
-st.markdown("<br>", unsafe_allow_html=True)
-
-st.markdown('<div class="info-title">⚙️ Technologies Used</div>', unsafe_allow_html=True)
-
-st.markdown("""
-<span class="tech-box">Python</span>
-<span class="tech-box">TensorFlow</span>
-<span class="tech-box">Keras</span>
-<span class="tech-box">Streamlit</span>
-<span class="tech-box">CNN</span>
-<span class="tech-box">LSTM</span>
-<span class="tech-box">Deep Learning</span>
-""", unsafe_allow_html=True)
-
-st.markdown("<br>", unsafe_allow_html=True)
-
-st.markdown('<div class="info-title">🔄 How It Works</div>', unsafe_allow_html=True)
-
-st.markdown("""
-<div class="info-text">
-1️⃣ Upload an image.<br>
-2️⃣ CNN extracts visual features.<br>
-3️⃣ The trained LSTM processes the features.<br>
-4️⃣ Words are predicted sequentially.<br>
-5️⃣ A meaningful caption describing the image is generated.
-</div>
-""", unsafe_allow_html=True)
-
-st.markdown('</div>', unsafe_allow_html=True)
-
 # ---------------- Footer ----------------
 st.markdown("""
 <div class="footer">
 AI Image Caption Generator • Powered by TensorFlow, Keras & Streamlit
 </div>
 """, unsafe_allow_html=True)
-
