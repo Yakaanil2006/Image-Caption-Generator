@@ -17,20 +17,17 @@ st.markdown("""
 
 <style>
 
-/* Background */
 .stApp{
 background: linear-gradient(135deg,#0f172a,#1e293b);
 color:white;
 font-family: 'Segoe UI', sans-serif;
 }
 
-/* Main container width */
 .block-container{
 max-width:900px;
 padding-top:30px;
 }
 
-/* Title */
 .title{
 font-size:42px;
 font-weight:700;
@@ -39,7 +36,6 @@ text-align:center;
 margin-bottom:5px;
 }
 
-/* Subtitle */
 .subtitle{
 text-align:center;
 font-size:18px;
@@ -47,7 +43,6 @@ color:#cbd5f5;
 margin-bottom:35px;
 }
 
-/* Upload Box */
 .upload-card{
 background:#1e293b;
 padding:25px;
@@ -56,7 +51,6 @@ border:1px solid #334155;
 box-shadow:0 10px 30px rgba(0,0,0,0.4);
 }
 
-/* Caption result */
 .caption-box{
 background:#22c55e;
 padding:18px;
@@ -67,7 +61,6 @@ font-weight:600;
 margin-top:20px;
 }
 
-/* Buttons */
 div.stButton > button{
 background:#22c55e;
 color:white;
@@ -83,13 +76,11 @@ background:#16a34a;
 transform:scale(1.03);
 }
 
-/* Image style */
 img{
 border-radius:10px;
 margin-top:10px;
 }
 
-/* Hide footer */
 footer{
 visibility:hidden;
 }
@@ -107,7 +98,7 @@ page = st.sidebar.radio(
 ["📤 Upload Image", "🤖 Model Info", "ℹ️ About Project"]
 )
 
-# ---------------- PAGE 1 : Upload Image ----------------
+# ---------------- Upload Page ----------------
 
 if page == "📤 Upload Image":
 
@@ -147,7 +138,7 @@ if uploaded_file is not None:
         )
 ```
 
-# ---------------- PAGE 2 : Model Info ----------------
+# ---------------- Model Info Page ----------------
 
 elif page == "🤖 Model Info":
 
@@ -157,29 +148,22 @@ st.title("🤖 Model Information")
 st.write("""
 ```
 
-This project uses a **Deep Learning Image Captioning Model**.
+This project uses a Deep Learning Image Captioning Model.
 
-### Architecture
+Architecture:
 
-CNN + LSTM Model
+• CNN (Xception) – Extracts image features
+• LSTM Network – Generates the caption
+• Tokenizer – Converts words into sequences
 
-• **Xception CNN**
-Extracts image features.
+Workflow:
 
-• **LSTM Network**
-Generates the caption word by word.
+1. Upload Image
+2. Extract features using CNN
+3. Generate caption using LSTM
+   """)
 
-• **Tokenizer**
-Converts words into numerical sequences.
-
-### Workflow
-
-1️⃣ Upload Image
-2️⃣ Extract Features using CNN
-3️⃣ Generate Caption using LSTM
-""")
-
-# ---------------- PAGE 3 : About ----------------
+# ---------------- About Page ----------------
 
 elif page == "ℹ️ About Project":
 
@@ -189,17 +173,12 @@ st.title("ℹ️ About This Project")
 st.write("""
 ```
 
-This **AI Image Caption Generator** automatically describes images using deep learning.
+AI Image Caption Generator created using:
 
-### Technologies Used
+• TensorFlow
+• Keras
+• Streamlit
+• CNN + LSTM architecture
 
-* TensorFlow
-* Keras
-* Streamlit
-* CNN + LSTM Architecture
-
-### Developer
-
-Anil Kumar
-Machine Learning Enthusiast 🚀
+This application automatically describes images using deep learning.
 """)
