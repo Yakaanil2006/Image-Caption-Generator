@@ -2,33 +2,32 @@ import numpy as np
 import pickle
 import os
 
-from keras.preprocessing.sequence import pad_sequences
-from keras.applications.xception import Xception, preprocess_input
-from keras.preprocessing.image import load_img, img_to_array
-from keras.models import load_model
+from tensorflow.keras.preprocessing.sequence import pad_sequences
+from tensorflow.keras.applications.xception import Xception, preprocess_input
+from tensorflow.keras.preprocessing.image import load_img, img_to_array
+from tensorflow.keras.models import load_model
 
 max_length = 34
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-# -------- Load tokenizer --------
+# Load tokenizer
 tokenizer_path = os.path.join(BASE_DIR, "tokenizer.p")
 
 with open(tokenizer_path, "rb") as f:
     tokenizer = pickle.load(f)
 
-# -------- Load caption model --------
+# Load caption model
 model_path = os.path.join(BASE_DIR, "caption_model.keras")
 
-model = load_model(model_path, compile=False, safe_mode=False)
+model = load_model(model_path, compile=False)
 
-# -------- Feature extractor --------
+# Feature extractor
 xception_model = Xception(
     weights="imagenet",
     include_top=False,
     pooling="avg"
 )
-
 
 def extract_features(filename):
 
