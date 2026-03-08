@@ -225,4 +225,4 @@ st.markdown("""
 AI Image Caption Generator • Powered by TensorFlow, Keras & Streamlit
 </div>
 """, unsafe_allow_html=True)
-""", unsafe_allow_html=True)
+
