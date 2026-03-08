@@ -36,16 +36,6 @@ margin-bottom:40px;
 font-size:18px;
 }
 
-/* Glass Card */
-.card{
-background:rgba(30,41,59,0.6);
-backdrop-filter:blur(14px);
-border-radius:16px;
-padding:28px;
-border:1px solid rgba(255,255,255,0.08);
-box-shadow:0 10px 30px rgba(0,0,0,0.45);
-}
-
 /* Upload Box */
 section[data-testid="stFileUploader"]{
 border:2px dashed #475569;
@@ -89,7 +79,6 @@ padding:35px;
 background:rgba(30,41,59,0.6);
 border-radius:16px;
 border:1px solid rgba(255,255,255,0.08);
-backdrop-filter:blur(14px);
 }
 
 .info-title{
@@ -144,20 +133,14 @@ left, right = st.columns(2)
 # ---------------- Upload Column ----------------
 with left:
 
-    st.markdown('<div class="card">', unsafe_allow_html=True)
-
     uploaded_file = st.file_uploader("📤 Upload Image", type=["jpg","jpeg","png"])
 
     if uploaded_file:
         image = Image.open(uploaded_file)
         st.image(image, use_container_width=True)
 
-    st.markdown('</div>', unsafe_allow_html=True)
-
 # ---------------- Caption Column ----------------
 with right:
-
-    st.markdown('<div class="card">', unsafe_allow_html=True)
 
     if uploaded_file:
 
@@ -180,8 +163,6 @@ with right:
 
     else:
         st.info("Upload an image to generate caption")
-
-    st.markdown('</div>', unsafe_allow_html=True)
 
 # ---------------- Project Details Section ----------------
 st.markdown('<div class="info-section">', unsafe_allow_html=True)
@@ -241,8 +222,7 @@ st.markdown('</div>', unsafe_allow_html=True)
 # ---------------- Footer ----------------
 st.markdown("""
 <div class="footer">
-Built with ❤️ using Streamlit <br>
-<a href="https://github.com/Yakaanil2006">GitHub</a> |
-<a href="#">LinkedIn</a>
+AI Image Caption Generator • Powered by TensorFlow, Keras & Streamlit
 </div>
+""", unsafe_allow_html=True)
 """, unsafe_allow_html=True)
