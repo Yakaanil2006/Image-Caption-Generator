@@ -453,7 +453,9 @@ The project includes a Streamlit interface.
 ## Features
 
 ✅ Upload image
+
 ✅ Display uploaded image
+
 ✅ Generate captions instantly
 
 ---
@@ -500,9 +502,13 @@ streamlit run app.py
 This project demonstrates:
 
 ✅ End-to-end AI pipeline
+
 ✅ Deep Learning implementation
+
 ✅ Transfer Learning
+
 ✅ Computer Vision + NLP integration
+
 ✅ Real-world deployment using Streamlit
 ---
 
