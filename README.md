@@ -60,7 +60,6 @@ Image-Caption-Generator/
 ├── captions.txt                    # Flickr8k captions dataset
 ├── features.pkl                    # Pre-extracted VGG16 features
 ├── tokenizer.pkl                   # Fitted Keras tokenizer
-├── mapping.pkl                     # image_id → captions mapping
 ├── requirements.txt                # Python dependencies
 └── README.md
 ```
